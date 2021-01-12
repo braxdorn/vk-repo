@@ -9,12 +9,12 @@ import java.util.Scanner;
 public class Driver {
 
 	public static void main(String[] args) {
-		
-		//printing title and dev info to console		
+	
+		//printing title and developer info to console, looks weird here but looks better in the console
 		System.out.println(" _      ____   _____ _  ________ _____  __  __ ______\r\n"
-				+ "| |    / __ \\ / ____| |/ /  ____|  __ \\|  \\/  |  ____|     by Braxton Dorn\r\n"
-				+ "| |   | |  | | |    | ' /| |__  | |  | | \\  / | |__     ___ __  _Jan. 2021\r\n"
-				+ "| |   | |  | | |    |  < |  __| | |  | | |\\/| |  __|   / __/ _ \\| '_ ` _ \\ \r\n"
+				+ "| |    / __ \\ / ____| |/ /  ____|  __ \\|  \\/  |  ____|      by Braxton Dorn\r\n"
+				+ "| |   | |  | | |    | ' /| |__  | |  | | \\  / | |__     ___ __   _Jan. 2021\r\n"
+				+ "| |   | |  | | |    |  < |  __| | |  | | |\\/| |  __|   / __/ _ \\| '_ `'_ \\ \r\n"
 				+ "| |___| |__| | |____| . \\| |____| |__| | |  | | |____ | (_| (_) | | | | | |\r\n"
 				+ "|______\\____/ \\_____|_|\\_\\______|_____/|_|  |_|______(_)___\\___/|_| |_| |_|\r\n");
 
