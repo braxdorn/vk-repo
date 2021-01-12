@@ -6,7 +6,6 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Scanner;
 
-
 public class Driver {
 
 	public static void main(String[] args) {
@@ -51,7 +50,11 @@ public class Driver {
 				+ "Close Application");
 		
 		//collect user input, first char is unique
-		char selection = s.nextLine().charAt(0);
+		char selection = '-'; //defaulted in case user hits enter with no input
+		String input = s.nextLine();
+		if(input != "") {
+			selection = input.charAt(0);
+		}
 		
 		boolean loop = true; //loop by default
 		
@@ -100,7 +103,11 @@ public class Driver {
 				+ "Return to main menu");
 		
 		//collect user input, first char is unique
-		char selection = s.nextLine().charAt(0);
+		char selection = '-';
+		String input = s.nextLine();
+		if (input != "") {
+			selection = input.charAt(0);
+		}
 		
 		boolean loop = true;
 		
@@ -128,7 +135,7 @@ public class Driver {
 				} catch(Exception e) { 
 					//tell user it failed listing common reasons
 					//ask if they would like to try again, collect response, set loop flag accordingly
-					System.out.println("\r\nUnable to copy file, file not found or already exists.\r\n"
+					System.out.println("Unable to copy file, file not found or already exists.\r\n"
 							+ "Would you like to try again?");
 					char response = s.nextLine().charAt(0);
 					if(response == 'n' || response == 'N') { flag = false; } //no, break loop
@@ -143,8 +150,8 @@ public class Driver {
 			do {
 				//request file name and collect input
 				System.out.println("\r\nWhat is the name of the file you wish to delete?");
-				String input = s.nextLine();
-				File target = new File(fp.toString() +"\\" + input);
+				String tinput = s.nextLine();
+				File target = new File(fp.toString() +"\\" + tinput);
 				
 				//print deleting message
 				System.out.println("Attempting to delete file...");
@@ -156,7 +163,7 @@ public class Driver {
 					flag = false; //do not repeat
 				} catch(Exception e) {
 					//tell user it failed listing common reasons
-					System.out.println("\r\nUnable to delete file, file not found or protected.\r\n"
+					System.out.println("Unable to delete file, file not found or protected.\r\n"
 							+ "Would you like to try again?");
 					char response = s.nextLine().charAt(0);
 					if(response == 'n' || response == 'N') { flag = false; } //no, break loop
@@ -170,18 +177,18 @@ public class Driver {
 			do {
 				//request file name and collect input
 				System.out.println("\r\nWhat is the name of the file you wish to locate?");
-				String input = s.nextLine();
-				File target = new File(fp.toString() +"\\" + input);
+				String tinput = s.nextLine();
+				File target = new File(fp.toString() +"\\" + tinput);
 				
 				//print deleting message
 				System.out.println("Attempting to locate file...");
 
 				//check and report results
 				if(target.exists()) {
-					System.out.println("File" + target.getName() + "exists in repository!");
+					System.out.println("File " + target.getName() + " exists in repository!");
 					flag = false; //do not repeat
 				} else {
-					System.out.println("\r\nUnable to locate file.\r\n"
+					System.out.println("Unable to locate file.\r\n"
 							+ "Would you like to search again?");
 					char response = s.nextLine().charAt(0);
 					if(response == 'n' || response == 'N') { flag = false; } //no, break loop
