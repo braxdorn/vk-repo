@@ -59,7 +59,8 @@ public class SubMenu extends PMenu {
 				
 				//print searching message
 				System.out.println("Locating file...");
-				//not a lambda expression, may implement later
+				//not a lambda expression for simplicity
+				//could be one but not necessary for a simple filter
 				ArrayList<String> matches = new ArrayList<String>();
 				for( String f : contents ) {
 					if (f.matches(tinput+".*")) { matches.add(f); }
@@ -107,7 +108,7 @@ public class SubMenu extends PMenu {
 				//print searching message
 				System.out.println("Attempting to locate file...");
 				
-				//not a lambda expression, may implement later
+				//not a lambda expression, as in search function
 				ArrayList<String> matches = new ArrayList<String>();
 				for( String f : contents ) {
 					if (f.matches(tinput+".*")) { matches.add(f); }
